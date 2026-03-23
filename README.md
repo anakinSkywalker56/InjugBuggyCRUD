@@ -1,4 +1,4 @@
-# InjugBuggyCRUD ft
+# InjugBuggyCRUD ft. Erika G.
 My Debugged version of BuggyCRUD activity from Mr. Jules' Lab assignment
 
 # ***Привет!*** 👋 Welcome to my Revised and debugged version of BuggyCRUD
@@ -70,14 +70,15 @@ It contains the ff:
 # Actuall Debugging Phase 💨💨🪳
 
 ## List Summary of Known and Fixed bugs
-| # | Location                | Bug                     | Solution                                                         |
-|---|-------------------------|-------------------------|------------------------------------------------------------------|
-| 1 | GET: Students           | Searchbar               | Changes: from && condition to \|\|                               |
-| 2 | GET: Students/Details/5 | Getting Student Details | Changes: change != to == on (m.Id == id)                         |
-| 3 | POST: Students/Create   | Validation Issue        | Changes: Remove ! from !ModelState                               |
-| 4 | POST: Students/Edit/5   | Does not update         | Changes: Changed .Add() to .Update()                             |
-| 5 | POST: Students/Delete/5 | No delete content       | Changes: Add _context.Students.Remove(student);                  |
-| 6 | Edit.cshtml             | Wrong max num accepted  | Changes: From 4.0 max to 5.0 max                                 |
-| 7 | Details.cshtml          | Wrong Display of FName  | Changes: DisplayFor model.FirstName from LastName (Interchanged) | 
-| 8 | Details.cshtml	      | Wrong Display of LName  | Changes: DisplayFor model.LastName from FirstName (Interchanged)   | 
+| # | Location                | Bug                       | Solution                                                         |
+|---|-------------------------|---------------------------|------------------------------------------------------------------|
+| 1 | GET: Students           | Searchbar                 | Changes: from && condition to \|\|                               |
+| 2 | GET: Students/Details/5 | Getting Student Details   | Changes: change != to == on (m.Id == id)                         |
+| 3 | POST: Students/Create   | Validation Issue          | Changes: Remove ! from !ModelState                               |
+| 4 | POST: Students/Edit/5   | Does not update           | Changes: Changed .Add() to .Update()                             |
+| 5 | POST: Students/Delete/5 | No delete content         | Changes: Add _context.Students.Remove(student);                  |
+| 6 | Edit.cshtml             | Wrong max num accepted    | Changes: From 4.0 max to 5.0 max                                 |
+| 7 | Details.cshtml          | Wrong Display of FName    | Changes: DisplayFor model.FirstName from LastName (Interchanged) | 
+| 8 | Details.cshtml	        | Wrong Display of LName    | Changes: DisplayFor model.LastName from FirstName (Interchanged) | 
+| 9 | Student.cs              | Sorting of names is wrong | Changes: Sorting Issue fix, interchanged LastName and FirstName  |
 
