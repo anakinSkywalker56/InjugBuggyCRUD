@@ -54,20 +54,7 @@ While I was looking around the file, I fortunately found the README conmtaining 
 As per instruction, the Database Name should be appropriately the same as the `appsettings.json` database, which was *drum roll* 🥁🥁 `BuggyStudentCRUDDb` yeyy! 🎊🎊
 
 ### Table creation
-Just the standard procedure, I also took the details for these in the Model folder, since iT repReSentS tHe DatAbAse DaTa In OuR CodE or something lmao
-
-It contains the ff:
-- Id (PK)            | int
-- FirstName          | nvarchar(50)
-- LastName           | nvarchar(50)
-- Email              | nvarchar(50)   *I just assumed this*
-- Course             | nvarchar(100)
-- YearLevel          | int
-- GPA                | decimal(2,1)   *I just assumed this*
-- EnrollmentDate     | datetime
-- FullName           | nvarchar(100)  *I just assumed this*
-
-- Table Name         | Student        *Assummed according to the Model.cs Name*
+I just ran the `scaffold.bat` file haha, I understand that I overdid the previous iteration of this (as you may or may not have seen in previous commits), but then I reread the instructions and found why I had two sets of tables in my database haha (it was the reason I was so confused on iteration #1). All is well now :)
 
 
 # Actual Debugging Phase 💨💨🪳
