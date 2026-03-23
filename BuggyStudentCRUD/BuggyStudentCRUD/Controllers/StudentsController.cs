@@ -1,3 +1,4 @@
+using AspNetCoreGeneratedDocument;
 using BuggyStudentCRUD.Data;
 using BuggyStudentCRUD.Models;
 using Microsoft.AspNetCore.Mvc;
@@ -27,8 +28,9 @@ namespace BuggyStudentCRUD.Controllers
             if (!String.IsNullOrEmpty(searchString))
             {
                 students = students.Where(s => s.FirstName.Contains(searchString)
-                    && s.LastName.Contains(searchString)
-                    && s.Course.Contains(searchString));
+                    || s.LastName.Contains(searchString)
+                    || s.Course.Contains(searchString));
+                    // Changes: from && condition to ||
             }
 
             switch (sortOrder)
@@ -65,8 +67,8 @@ namespace BuggyStudentCRUD.Controllers
             }
 
             var student = await _context.Students
-                .FirstOrDefaultAsync(m => m.Id != id);
-
+                .FirstOrDefaultAsync(m => m.Id == id);
+                                    // Changes: change != to == on (m.Id == id)
             if (student == null)
             {
                 return NotFound();
@@ -86,7 +88,8 @@ namespace BuggyStudentCRUD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,Email,Course,YearLevel,GPA,EnrollmentDate")] Student student)
         {
-            if (!ModelState.IsValid)
+            // Changes: Remove ! from !ModelState
+            if (ModelState.IsValid)
             {
                 _context.Add(student);
                 await _context.SaveChangesAsync();
@@ -125,7 +128,8 @@ namespace BuggyStudentCRUD.Controllers
             {
                 try
                 {
-                    _context.Add(student);
+                    // Changes: Changed .Add() to .Update()
+                    _context.Update(student);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
@@ -170,7 +174,8 @@ namespace BuggyStudentCRUD.Controllers
             var student = await _context.Students.FindAsync(id);
             if (student != null)
             {
-
+                // Changes: Add context on Delete Feature
+                _context.Students.Remove(student);
             }
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
