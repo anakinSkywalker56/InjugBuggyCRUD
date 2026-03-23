@@ -65,3 +65,12 @@ It contains the ff:
 - FullName           | nvarchar(100)  *I just assumed this*
 
 - Table Name         | Student        *Assummed according to the Model.cs Name*
+
+
+# Actuall Debugging Phase 💨💨🪳
+
+## List Summary of Known and Fixed bugs
+| # | Location         | Bug        | Solution |
+|---|------------------|------------|----------|
+| 1 | GET: Students    | 3.5        |
+| 1 | Information Tech | 3.8        |
