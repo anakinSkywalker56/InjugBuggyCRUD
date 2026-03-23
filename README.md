@@ -68,7 +68,8 @@ I just ran the `scaffold.bat` file haha, I understand that I overdid the previou
 | 4 | POST: Students/Edit/5   | Does not update           | Changes: Changed .Add() to .Update()                             |
 | 5 | POST: Students/Delete/5 | No delete content         | Changes: Add _context.Students.Remove(student);                  |
 | 6 | Edit.cshtml             | Wrong max num accepted    | Changes: From 4.0 max to 5.0 max                                 |
-| 7 | Details.cshtml          | Wrong Display of FName    | Changes: DisplayFor model.FirstName from LastName (Interchanged) | 
-| 8 | Details.cshtml	        | Wrong Display of LName    | Changes: DisplayFor model.LastName from FirstName (Interchanged) | 
-| 9 | Student.cs              | Sorting of names is wrong | Changes: Sorting Issue fix, interchanged LastName and FirstName  |
+| 7 | Create.cshtml           | Wrong max num accepted    | Changes: From 4.0 max to 5.0 max                                 |
+| 8 | Details.cshtml          | Wrong Display of FName    | Changes: DisplayFor model.FirstName from LastName (Interchanged) | 
+| 9 | Details.cshtml	        | Wrong Display of LName    | Changes: DisplayFor model.LastName from FirstName (Interchanged) | 
+| 10 | Student.cs              | Sorting of names is wrong | Changes: Sorting Issue fix, interchanged LastName and FirstName  |
 
