@@ -6,6 +6,9 @@ My Debugged version of BuggyCRUD activity from Mr. Jules' Lab assignment
 Below are the notes, obstacles, and solutions I made to make the program work
 
 # ⚠️⚠️Trigger Warning!! EXTREME YAPPING
+So if you wanna skip to the actual solved problems part, you can skip to:
+- [Actual Debugging Phase 💨💨🪳](#actual-debugging-phase-)
+
 You have been appropriately warned
 
 
@@ -67,7 +70,7 @@ It contains the ff:
 - Table Name         | Student        *Assummed according to the Model.cs Name*
 
 
-# Actuall Debugging Phase 💨💨🪳
+# Actual Debugging Phase 💨💨🪳
 
 ## List Summary of Known and Fixed bugs
 | # | Location                | Bug                       | Solution                                                         |
